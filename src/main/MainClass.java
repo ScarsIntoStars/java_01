@@ -21,7 +21,6 @@ public class MainClass {
             Scanner sc = new Scanner(System.in);
             int num = sc.nextInt();
 
-            StudentService sts = new StudentService();
             if(num==0){
                 System.out.println("프로그램을 종료합니다.");
                 break;
@@ -30,8 +29,15 @@ public class MainClass {
                 studentService.save();
             } else if (num == 2) {
                 System.out.println("학생상세조회입니다.");
+                /*
+                service의 findById
+                - id값을 입력받고, repository의 findById로 id값을 넘김
+                - 입력받은 id에 해당하는 학생 데이터를 리턴받음(일치하는 것 찾기)
+                - 리턴받은 값을 출력함
+                 */
             } else if (num == 3) {
                 System.out.println("학생목록조회입니다!");
+                studentService.findAll();
             } else {
                 System.out.println("1, 2, 3만 입력가능합니다!");
             // ctrl + d 코드복사
