@@ -1,5 +1,7 @@
 package main;
 
+import service.StudentService;
+
 import java.util.Scanner;
 
 public class MainClass {
@@ -11,6 +13,7 @@ public class MainClass {
 
     // psvm: 메인메서드
     public static void main(String[] args) {
+        StudentService studentService = new StudentService();
 
         // new Scanner(System.in) 입력 후 art + enter 하면 좌변을 만들어 줌
         while(true){
@@ -18,11 +21,13 @@ public class MainClass {
             Scanner sc = new Scanner(System.in);
             int num = sc.nextInt();
 
+            StudentService sts = new StudentService();
             if(num==0){
                 System.out.println("프로그램을 종료합니다.");
                 break;
             } else if(num == 1) {
-                System.out.println("학생등록입니다.");
+                System.out.println("학생등록 메뉴입니다.");
+                studentService.save();
             } else if (num == 2) {
                 System.out.println("학생상세조회입니다.");
             } else if (num == 3) {
