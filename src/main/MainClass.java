@@ -26,9 +26,9 @@ public class MainClass {
             } else if (num == 2) {
                 System.out.println("학생상세조회입니다.");
             } else if (num == 3) {
-                System.out.println("학생목록조회입니다");
+                System.out.println("학생목록조회입니다!");
             } else {
-                System.out.println("1, 2, 3만 입력가능합니다");
+                System.out.println("1, 2, 3만 입력가능합니다!");
             // ctrl + d 코드복사
             }
         }
