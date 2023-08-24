@@ -1,17 +1,26 @@
 package dto;
 
 public class StudentDTO {
-
     private Long id; // 학생 관리번호
     private String studentName;
     private String studentMajor;
     private String studentMobile;
 
+    // 증가값을 유지하기 위해 static으로 선언
+    private static long num = 1L;
     // 기본생성자
-    public StudentDTO(){
-
+    public StudentDTO() {
     }
 
+    public StudentDTO(String studentName, String studentMajor, String studentMobile) {
+        // 객체를 생성하면서 num 값을 하나 증가시킨 결과를 id에 저장
+        this.id = num++;
+        this.studentName = studentName;
+        this.studentMajor = studentMajor;
+        this.studentMobile = studentMobile;
+    }
+
+    // getter/setter
     public Long getId() {
         return id;
     }
@@ -44,6 +53,7 @@ public class StudentDTO {
         this.studentMobile = studentMobile;
     }
 
+    // toString
     @Override
     public String toString() {
         return "StudentDTO{" +

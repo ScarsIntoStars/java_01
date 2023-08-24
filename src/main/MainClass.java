@@ -41,6 +41,7 @@ public class MainClass {
                 studentService.update();
             } else if (sel == 5) {
                 System.out.println("학생삭제 메뉴");
+                studentService.delete();
             } else if (sel == 0) {
                 System.out.println("종료");
             }
